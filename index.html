@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alwen's Portfolio</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo"><a href="#home">~alsstark</a></div>
+      <ul class="nav-links">
+        <li><a href="#about">$~whoami</a></li>
+        <li><a href="#blog">BLOGS</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Top image section -->
+  <div class="top-image" id="home">
+    <div>
+      <h1>ALWEN PERARA</h1>
+      <h2>software developer | Cybersecurity analyst | CTF player</h2>
+    </div>
+  </div>
+
+  <!-- Particles section -->
+  <div class="particles-section">
+    <div id="particles-js"></div>
+
+    <!-- About Me -->
+    <div class="content" id="about">
+      <div class="container">
+        <div class="profile">
+          <img src="assets/images/alss.jpg" alt="Profile Image">
+          <p>ALWEN PERARA</p>
+        </div>
+        <div class="about">
+          <h1>ABOUT ME</h1>
+          <p>
+            Myself Alwen Perara, a passionate and driven Computer Science Engineering graduate with a deep interest in
+            software development, cybersecurity, and ethical hacking. I enjoy tackling complex problems and continually
+            learning new skills to stay ahead in this ever-evolving field. My journey into cybersecurity started with a
+            fascination for how systems can be compromised and how we can protect them. I've worked on various ethical
+            hacking projects, including Capture the Flag (CTF) challenges, and I am constantly sharpening my skills in
+            penetration testing, vulnerability assessments, and network security. When I'm not coding, you can find me
+            blogging about the latest trends in cybersecurity or exploring new technologies to integrate into my
+            projects. Beyond academics, I am also an enthusiastic football player who thrives on teamwork and discipline
+            both on and off the field. Feel free to reach out if you'd like to collaborate or learn more about my work!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog -->
+    <div class="content" id="blog">
+      <h1>MY BLOGS</h1>
+      <div class="cards blog-scroll-container">
+        <a href="https://medium.com/@alwenperara44/phishing-5991aaf23df5" class="card blog-card">
+          <img src="assets/images/1.png" alt="Blog 1" />
+          <span class="blog-name">Understanding Phishing: A Threat to Online Security</span>
+        </a>
+        <a href="https://medium.com/@alwenperara44/automating-dns-lookup-with-a-bash-script-a6e0fbba6b9d" class="card blog-card">
+          <img src="assets/images/2.png" alt="Blog 2" />
+          <span class="blog-name">Automating DNS Lookup with a Bash Script</span>
+        </a>
+        <a href="https://medium.com/@alwenperara44/password-cracking-techniques-understanding-cybersecurity-threats-b1c59d8f3f18" class="card blog-card">
+          <img src="assets/images/3.jpg" alt="Blog 3" />
+          <span class="blog-name">Password Cracking Techniques: Understanding Cybersecurity Threats</span>
+        </a>
+        <a href="https://medium.com/@alwenperara44/exploiting-blue-on-tryhackme-a-walkthrough-59914681dc55" class="card blog-card">
+          <img src="assets/images/4.png" alt="Blog 4" />
+          <span class="blog-name">Exploiting - Blue on TryHackMe: A Walkthrough</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="content" id="projects">
+      <h1>PROJECTS</h1>
+      <div class="cards pro-scroll-container">
+        <a href="https://github.com/Alwenstark/Project_Durgs" class="card pro-card">
+          <img src="assets/images/c.png" alt="Durgs Chatbot" />
+          <span class="pro-name">Durgs-The Chatbot</span>
+        </a>
+        <a href="https://github.com/Alwenstark/my-scripts" class="card pro-card">
+          <img src="assets/images/u.jpg" alt="My Scripts" />
+          <span class="pro-name">My Scripts</span>
+        </a>
+        <a href="https://github.com/Alwenstark/Project_slingring" class="card pro-card">
+          <img src="assets/images/s.jpg" alt="Project Slingring" />
+          <span class="pro-name">Project_slingring</span>
+        </a>
+        <a href="https://github.com/Alwenstark/Project_Kalz" class="card pro-card">
+          <img src="assets/images/k.jpg" alt="Project Kalz" />
+          <span class="pro-name">Project_Kalz</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>© 2025 Alwen Perara | Reach me at <a href="mailto:alwenperara44@gmail.com">alwenperara44@gmail.com</a></p>
+        <div class="social-icons">
+          <a href="https://github.com/Alwenstark" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/alwen-perara-926a86187/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/als_xtark/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="assets/particles-config.js"></script>
+    <script>
+      // BLOG AUTO SCROLL (every 3s)
+      const blogScrollContainer = document.querySelector(".blog-scroll-container");
+      setInterval(() => {
+        if (blogScrollContainer) {
+          const blogCardWidth = blogScrollContainer.querySelector(".blog-card")?.offsetWidth || 300;
+          blogScrollContainer.scrollBy({ left: blogCardWidth + 20, behavior: "smooth" });
+          if (blogScrollContainer.scrollLeft + blogScrollContainer.offsetWidth >= blogScrollContainer.scrollWidth) {
+            blogScrollContainer.scrollTo({ left: 0, behavior: "smooth" });
+          }
+        }
+      }, 3000);
+
+      // PROJECT AUTO SCROLL (every 5s)
+      const proScrollContainer = document.querySelector(".pro-scroll-container");
+      setInterval(() => {
+        if (proScrollContainer) {
+          const proCardWidth = proScrollContainer.querySelector(".pro-card")?.offsetWidth || 300;
+          proScrollContainer.scrollBy({ left: proCardWidth + 20, behavior: "smooth" });
+          if (proScrollContainer.scrollLeft + proScrollContainer.offsetWidth >= proScrollContainer.scrollWidth) {
+            proScrollContainer.scrollTo({ left: 0, behavior: "smooth" });
+          }
+        }
+      }, 5000);
+    </script>
+</body>
+
+</html>
